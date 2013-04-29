@@ -1,0 +1,2 @@
+# of module          name                 type                 compatible
+virtio_mmio          *                    *                    virtio,mmio
