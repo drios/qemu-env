@@ -5,6 +5,8 @@ kompiled kernel and modules for qemu-system-arm and supported cpu - able to host
 
 attached is script to start the VM. "$@" is to pass any other arguments, for example "-vnc IP:screen#" to export the video as vnc server available through network or localy. to get network in brigde mode, tap support through kernel module is needed + existing bridge interface (linux. for other platforms check docs). discs are emulated through emulated scsi (/dev/sdX).
 
+initramfs is generated the standard xbian way from inside the VM. the only difference to standard RPI is kernel module versions mismash. the VM can be started with the standard initramfs.gz as well, but the modules will not start due to the mishmash. 
+
 ```
 export QEMU_AUDIO_DRV=none
 #-nographic -serial stdio 
